@@ -1,17 +1,25 @@
-<?php 
+<?php
+
 namespace Inc;
-class Config{
-    public static function get_services(){
+
+class Config
+{
+    public static function get_services()
+    {
         $services = array(
             \Inc\Api\Course::class,
             \Inc\Api\Speciality::class,
             \Inc\Api\Subject::class,
-            \Inc\Functions::class
+            \Inc\Functions::class,
+            \Inc\Route\Module::class,
+            \Inc\Route\Speciality::class,
+
         );
         return $services;
     }
-    public function start(){
-        foreach(self::get_services() as $service){
+    public function start()
+    {
+        foreach (self::get_services() as $service) {
             new $service();
         }
     }

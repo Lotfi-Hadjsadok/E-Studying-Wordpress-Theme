@@ -60,7 +60,8 @@
                 "choices": {
                     "cours": "cours",
                     "td": "td",
-                    "tp": "tp"
+                    "tp": "tp",
+                    "examen": "examen"
                 },
                 "allow_null": 0,
                 "other_choice": 0,
