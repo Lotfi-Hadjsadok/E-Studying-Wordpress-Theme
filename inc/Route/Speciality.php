@@ -11,11 +11,12 @@ class Speciality
     }
     public function add_query_vars($vars)
     {
-        $vars[] = 'semestre';
+        $vars[] = 'semester';
+        $vars[] = 'subject';
         return $vars;
     }
     public function speciality_url_rewrite()
     {
-        add_rewrite_rule('speciality/([^/]+)/([^/]+)/([^/]+)', 'index.php?post_type=speciality&name=$matches[1]&semestre=$matches[2]&subject=$matches[3]', 'top');
+        add_rewrite_rule('speciality/([^/]+)/([^/]+)/?([^/]*)', 'index.php?post_type=speciality&name=$matches[1]&semester=$matches[2]&subject=$matches[3]', 'top');
     }
 }

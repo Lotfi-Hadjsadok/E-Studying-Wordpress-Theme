@@ -22,7 +22,8 @@ class Subject
         $page = $request->get_param('page');
         $id = $request->get_param('id');
         $speciality_id = $request->get_param('speciality');
-        $subjects = $this->subject->get_subjects($page, $id, $speciality_id);
+        $semester = $request->get_param('semester');
+        $subjects = $this->subject->get_subjects($page, $id, $speciality_id, $semester);
         wp_send_json($subjects);
     }
 }

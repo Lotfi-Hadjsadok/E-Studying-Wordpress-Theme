@@ -11,8 +11,9 @@ class Config
             \Inc\Api\Speciality::class,
             \Inc\Api\Subject::class,
             \Inc\Functions::class,
-            \Inc\Route\Module::class,
             \Inc\Route\Speciality::class,
+            \Inc\Route\Module::class,
+            \Inc\Route\Semester::class,
 
         );
         return $services;

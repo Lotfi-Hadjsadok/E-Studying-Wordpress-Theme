@@ -13,11 +13,15 @@ class Module
         if (empty($query['post_type']) || empty($query['subject'])) {
             return $query;
         }
+
         $query = array(
             'page' => '',
             'post_type' => 'subject',
             'name' => $query['subject'],
+            'subject' => $query['subject'],
+            'semester' => $query['semester']
         );
+
         return $query;
     }
 }
