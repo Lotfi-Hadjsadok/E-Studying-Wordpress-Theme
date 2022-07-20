@@ -5,7 +5,7 @@
  * Description: E-Studying Plugin
  * Author: Lotfi Hadjsadok
  * Domain Name: e-studying
- * Version: 1.1
+ * Version: 1.2
  */
 
 use Inc\Config;
