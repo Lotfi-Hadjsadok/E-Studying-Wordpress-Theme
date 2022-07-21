@@ -10,5 +10,6 @@ class Enqueue
     }
     public function enqueue_scripts()
     {
+        wp_enqueue_style('breadcrumps-css', PLUGIN_DIR_URL . '/src/css/breadcrumps.css');
     }
 }

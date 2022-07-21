@@ -1,0 +1,4 @@
+.e-breadcrumbs-specialities a:not(:last-child)::after{
+    content: '-';
+    display: inherit;
+}
