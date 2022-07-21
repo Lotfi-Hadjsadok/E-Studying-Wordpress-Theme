@@ -10,7 +10,7 @@ $semester_slug = $speciality_slug . '/' . $semester;
 ?>
 <div class="container">
     <span class="e-breadcrumbs">
-        <strong>Speciality</strong> >
+        <strong> <a href="/">Accueil</a> > Speciality</strong> >
         <a href="<?= strtolower($speciality_slug) ?>"><?= strtoupper($post->post_title) ?></a> >
         <a href="<?= strtolower($semester_slug) ?>"><?= strtoupper($semester)  ?></a>
     </span>

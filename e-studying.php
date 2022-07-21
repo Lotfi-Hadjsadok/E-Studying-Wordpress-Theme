@@ -18,3 +18,10 @@ define('PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('PLUGIN_DIR_URL', plugin_dir_url(__FILE__));
 // START SERVICES
 (new Config())->start();
+
+// SEARCH BAR
+add_shortcode('search-bar', function () {
+    ob_start();
+    require PLUGIN_DIR . '/templates/search-specialities.php';
+    return ob_get_clean();
+});

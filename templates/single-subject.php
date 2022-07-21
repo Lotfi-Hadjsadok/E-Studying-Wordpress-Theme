@@ -9,7 +9,7 @@ $semester_slug = $speciality_slug . '/' . $semester;
 ?>
 <div class="container">
     <span class="e-breadcrumbs">
-        <strong>Speciality</strong> >
+        <strong> <a href="/">Accueil</a> > Speciality</strong> >
         <span class="e-breadcrumbs-specialities">
             <?php foreach ($specialities as $speciality) : ?>
                 <?php $speciality_slug = '/speciality/' . $speciality->post_title; ?>
