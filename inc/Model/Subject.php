@@ -11,6 +11,7 @@ class Subject
    public function add_data_to_subject($subject)
    {
       $subject->subject_speciality = get_field('subject_speciality', $subject->ID);
+      $subject->subject_semestre = get_field('subject_semestre', $subject->ID);
       return $subject;
    }
    public function get_subjects(int $page = null, int $id = null, string $speciality_id = null, string $semester = null)

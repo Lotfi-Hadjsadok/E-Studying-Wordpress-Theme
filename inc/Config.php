@@ -14,6 +14,7 @@ class Config
             \Inc\Route\Speciality::class,
             \Inc\Route\Module::class,
             \Inc\Route\Semester::class,
+            \Inc\Theme\Enqueue::class,
 
         );
         return $services;

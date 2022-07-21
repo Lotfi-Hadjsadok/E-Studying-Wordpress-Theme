@@ -1,8 +1,14 @@
 <?php
 get_header();
-echo get_query_var('speciality', 'lotfi');
-the_title();
+global $post;
+
+$speciality_slug = '/speciality/' . $post->post_name;
 ?>
-    
+<div class="container">
+    <span class="e-breadcrumbs">
+        <strong>Speciality</strong> >
+        <a href="<?= $speciality_slug  ?>"><?= strtoupper($post->post_title)  ?></a>
+    </span>
+</div>
 <?php
 get_footer();
