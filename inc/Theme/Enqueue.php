@@ -12,7 +12,10 @@ class Enqueue
     {
         $css_files = array(
             'breadcrumps',
-            'search-specialities'
+            'search-specialities',
+            'single-speciality',
+            'single-semester',
+            'general'
         );
         return $css_files;
     }

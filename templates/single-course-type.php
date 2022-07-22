@@ -1,4 +1,7 @@
 <?php
+
+use Inc\Model\Course;
+
 get_header();
 global $post;
 
@@ -8,6 +11,11 @@ $this_speciality = get_query_var('speciality');
 $this_speciality_slug = '/speciality/' . $this_speciality;
 $semester_slug = $this_speciality_slug . '/' . $semester;
 $subject_slug = $semester_slug . '/' . $post->post_name;
+$course_type = get_query_var('course_type');
+$course_type_slug = $subject_slug . '/' . $course_type;
+
+$courses = new Course();
+$courses = $courses->get_courses(null, null, get_the_ID(), $course_type);
 ?>
 <div class="container">
     <span class="e-breadcrumbs">
@@ -20,13 +28,13 @@ $subject_slug = $semester_slug . '/' . $post->post_name;
         </span>
         >
         <a href="<?= strtolower($semester_slug) ?>"><?= strtoupper($semester)  ?></a> >
-        <a href="<?= strtolower($subject_slug) ?>"><?= strtoupper(get_the_title())  ?></a>
+        <a href="<?= strtolower($subject_slug) ?>"><?= strtoupper(get_the_title())  ?></a> >
+        <a href="<?= $course_type_slug ?>"><?= strtoupper($course_type) ?></a>
     </span>
     <div class="e-data-container">
-        <a href="cours"><button>Cours</button></a>
-        <a href="td"> <button>TD</button> </a>
-        <a href="tp"> <button>TP</button> </a>
-        <a href="examen"> <button>Examen</button> </a>
+        <?php foreach ($courses as $course) : ?>
+            <a href="<?= $course->post_name ?>"><button><?= $course->post_title ?></button></a>
+        <?php endforeach; ?>
     </div>
 </div>
 <?php

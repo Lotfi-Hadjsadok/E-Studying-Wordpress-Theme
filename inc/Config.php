@@ -14,6 +14,8 @@ class Config
             \Inc\Route\Speciality::class,
             \Inc\Route\Module::class,
             \Inc\Route\Semester::class,
+            \Inc\Route\CourseType::class,
+            \Inc\Route\Course::class,
             \Inc\Theme\Enqueue::class,
 
         );

@@ -13,10 +13,13 @@ class Speciality
     {
         $vars[] = 'semester';
         $vars[] = 'subject';
+        $vars[] = 'speciality';
+        $vars[] = 'course_type';
+        $vars[] = 'course_name';
         return $vars;
     }
     public function speciality_url_rewrite()
     {
-        add_rewrite_rule('speciality/([^/]+)/([^/]+)/?([^/]*)', 'index.php?post_type=speciality&name=$matches[1]&semester=$matches[2]&subject=$matches[3]', 'top');
+        add_rewrite_rule('speciality/([^/]+)/([^/]+)/?([^/]*)/?([^/]*)/?([^/]*)', 'index.php?post_type=speciality&name=$matches[1]&speciality=$matches[1]&semester=$matches[2]&subject=$matches[3]&course_type=$matches[4]&course_name=$matches[5]', 'top');
     }
 }

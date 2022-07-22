@@ -2,3 +2,6 @@
     content: '-';
     display: inherit;
 }
+.container{
+    padding: 5px 0;
+}
