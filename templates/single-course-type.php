@@ -14,6 +14,8 @@ $subject_slug = $semester_slug . '/' . $post->post_name;
 $course_type = get_query_var('course_type');
 $course_type_slug = $subject_slug . '/' . $course_type;
 
+
+
 $courses = new Course();
 $courses = $courses->get_courses(null, null, get_the_ID(), $course_type);
 ?>

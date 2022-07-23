@@ -3,6 +3,12 @@ get_header();
 
 global $post;
 $speciality_slug = '/speciality/' . $post->post_name;
+$visited_specialities = get_user_meta(get_current_user_id(), '_speciality_visits', true) ?: null;
+if ($visited_specialities) {
+    $visited_specialities[get_the_ID()]->visited_count = (int) $visited_specialities[get_the_ID()]->visited_count + 1;
+    update_user_meta(get_current_user_id(), '_speciality_visits', $visited_specialities);
+}
+var_dump($visited_specialities);
 ?>
 <div class="container">
     <span class="e-breadcrumbs">
