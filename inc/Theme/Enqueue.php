@@ -34,5 +34,9 @@ class Enqueue
         foreach (self::get_js_files() as $js) {
             wp_enqueue_script($js . '-js', PLUGIN_DIR_URL . '/src/js/' . $js . '.js', array('jquery'), '1.0', true);
         }
+
+        // Selectize Library
+        wp_enqueue_style('selectize-css', 'https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.6/css/selectize.css');
+        wp_enqueue_script('selectize-js', 'https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.6/js/standalone/selectize.js');
     }
 }

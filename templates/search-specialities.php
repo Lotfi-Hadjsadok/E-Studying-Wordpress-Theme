@@ -13,13 +13,12 @@ if (get_current_user_id()) {
             $specialities_to_push[$speciality->ID]->visits_count = 0;
         }
         update_user_meta(get_current_user_id(), '_speciality_visits', $specialities_to_push);
+    } else {
+        uasort($visited_specialities, function ($a, $b) {
+            return $a->visited_count < $b->visited_count;
+        });
+        $specialities = $visited_specialities;
     }
-
-    uasort($visited_specialities, function ($a, $b) {
-        return $a->visited_count < $b->visited_count;
-    });
-
-    $specialities = $visited_specialities;
 }
 
 ?>
