@@ -1,7 +1,14 @@
-.e-breadcrumbs-specialities a:not(:last-child)::after{
-    content: '-';
-    display: inherit;
-}
 .container{
     padding: 5px 0;
+}
+.e-breadcrumbs{
+    display: flex;
+    flex-wrap: wrap;
+}
+.e-breadcrumbs-slug:not(:last-child)::after{
+    content: '>';
+}
+.e-breadcrumbs-slug a, .e-breadcrumbs-slug strong {
+    padding: 5px;
+    font-weight: bold;
 }

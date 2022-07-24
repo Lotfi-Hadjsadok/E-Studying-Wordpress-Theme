@@ -17,6 +17,7 @@ class Config
             \Inc\Route\CourseType::class,
             \Inc\Route\Course::class,
             \Inc\Theme\Enqueue::class,
+            \Inc\Theme\Breadcrumbs::class,
 
         );
         return $services;
