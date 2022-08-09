@@ -19,13 +19,13 @@ class Subject
       $args = array(
          'post_type' => 'subject',
          'posts_per_page' => -1,
-         'offset' => $page * API_POSTS_PER_PAGE,
       );
       if ($id != null) {
          $args['post__in'] = array($id);
       }
-      if ($page != null) {
+      if ($page !== null) {
          $args['posts_per_page'] = API_POSTS_PER_PAGE;
+         $args['offset'] = $page * API_POSTS_PER_PAGE;
       }
       if ($speciality_id != null) {
          $speciality_id = explode(',', $speciality_id);

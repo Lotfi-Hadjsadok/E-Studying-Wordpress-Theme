@@ -14,7 +14,7 @@ $slug = '/speciality';
         <a href="/">Accueil</a>
     </p>
     <p class="e-breadcrumbs-slug">
-        <strong>Speciality</strong>
+        <strong>Specialité</strong>
     </p>
     <?php foreach ($crumbs as $crumb) : ?>
         <?php if ($crumb != '') : ?>

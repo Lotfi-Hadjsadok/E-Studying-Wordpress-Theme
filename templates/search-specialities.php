@@ -3,7 +3,7 @@
 use Inc\Model\Speciality;
 
 $specialities = new Speciality();
-$specialities = $specialities->get_specialities_algorithm();
+$specialities = $specialities->get_specialities();
 ?>
 <div class="e-search">
     <select class="e-search-specialities" name="" id="">

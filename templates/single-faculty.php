@@ -6,7 +6,7 @@ get_header();
 $taxonomy = get_queried_object();
 $taxonomy_slug = '/faculty/' . $taxonomy->slug;
 $specialities = new Speciality();
-$specialities = $specialities->get_specialities_algorithm($taxonomy->slug);
+$specialities = $specialities->get_specialities(null,null,$taxonomy->slug);
 ?>
 <div class="container">
     <span class="e-breadcrumbs">

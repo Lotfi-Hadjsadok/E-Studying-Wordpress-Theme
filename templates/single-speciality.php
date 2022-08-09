@@ -5,8 +5,8 @@ use Inc\Model\Speciality;
 get_header();
 
 global $post;
-$speciality = new Speciality();
-$speciality->update_specialities_algorithm_views();
+//$speciality = new Speciality();
+//$speciality->update_specialities_algorithm_views();
 ?>
 <div class="container">
     <?php do_action('e-breadcrumbs') ?>
