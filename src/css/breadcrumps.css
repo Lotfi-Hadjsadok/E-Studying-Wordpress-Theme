@@ -1,14 +1,12 @@
-.container{
-    padding: 5px 0;
+.e-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
 }
-.e-breadcrumbs{
-    display: flex;
-    flex-wrap: wrap;
+.e-breadcrumbs-slug:not(:last-child)::after {
+  content: ">";
 }
-.e-breadcrumbs-slug:not(:last-child)::after{
-    content: '>';
-}
-.e-breadcrumbs-slug a, .e-breadcrumbs-slug strong {
-    padding: 5px;
-    font-weight: bold;
+.e-breadcrumbs-slug a,
+.e-breadcrumbs-slug strong {
+  padding: 5px;
+  font-weight: bold;
 }
