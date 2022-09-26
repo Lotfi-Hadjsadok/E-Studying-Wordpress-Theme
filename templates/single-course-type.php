@@ -29,7 +29,6 @@ switch ( $course_type ) {
 		$icons = 'lni lni-graduation';
 		break;
 }
-echo $course_type;
 $courses = new Course();
 $courses = $courses->get_courses( null, null, get_the_ID(), $course_type );
 ?>

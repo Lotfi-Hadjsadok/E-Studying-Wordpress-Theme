@@ -6,10 +6,6 @@ class Config {
 
 	public static function get_services() {
 		$services = array(
-			\Inc\Api\Course::class,
-			\Inc\Api\Speciality::class,
-			\Inc\Api\Subject::class,
-			\Inc\Api\Faculty::class,
 			\Inc\Functions::class,
 			\Inc\Route\Speciality::class,
 			\Inc\Route\Module::class,
@@ -18,6 +14,10 @@ class Config {
 			\Inc\Route\Course::class,
 			\Inc\Theme\Enqueue::class,
 			\Inc\Theme\Breadcrumbs::class,
+			\Inc\Api\Course::class,
+			\Inc\Api\Speciality::class,
+			\Inc\Api\Subject::class,
+			\Inc\Api\Faculty::class,
 
 		);
 		return $services;

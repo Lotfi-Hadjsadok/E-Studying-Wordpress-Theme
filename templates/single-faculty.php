@@ -9,7 +9,7 @@ $specialities  = new Speciality();
 $specialities  = $specialities->get_specialities( null, null, $taxonomy->slug );
 ?>
 <div class="container">
-    <img width="100" height="100" src="<?php echo ttw_thumbnail_url( 0 ); ?>" alt="">
+    <!-- <img width="100" height="100" src="<?php echo ttw_thumbnail_url( 0 ); ?>" alt=""> -->
     <span class="e-breadcrumbs">
         <p class="e-breadcrumbs-slug">
             <a href="/">Accueil</a>
@@ -18,7 +18,7 @@ $specialities  = $specialities->get_specialities( null, null, $taxonomy->slug );
             <strong>Faculté</strong>
         </p>
         <p class="e-breadcrumbs-slug">
-            <a href="<?php echo $taxonomy_slug; ?>"><?php echo strtoupper( $taxonomy->name ); ?></a>
+            <a href="<?php echo $taxonomy_slug; ?>"><?php echo mb_strtoupper( $taxonomy->name ); ?></a>
         </p>
     </span>
     <div class="e-data-container">

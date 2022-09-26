@@ -20,7 +20,7 @@ $slug = '/speciality';
     <?php if ( $crumb != '' ) : ?>
     <?php $slug .= '/' . $crumb; ?>
     <p class="e-breadcrumbs-slug">
-        <a href="<?php echo $slug; ?>"><?php echo ucfirst( $crumb ); ?></a>
+        <a href="<?php echo $slug; ?>"><?php echo mb_strtoupper( $crumb ); ?></a>
     </p>
     <?php endif; ?>
     <?php endforeach; ?>

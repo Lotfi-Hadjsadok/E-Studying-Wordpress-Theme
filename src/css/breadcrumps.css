@@ -1,6 +1,10 @@
 .e-breadcrumbs {
   display: flex;
   flex-wrap: wrap;
+  margin: 10px 0;
+}
+.e-breadcrumbs > * {
+  margin: 0;
 }
 .e-breadcrumbs-slug:not(:last-child)::after {
   content: ">";
